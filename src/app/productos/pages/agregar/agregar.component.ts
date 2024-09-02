@@ -1,5 +1,5 @@
 import { Component} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-agregar',
@@ -12,11 +12,11 @@ export class AgregarComponent {
   texto1: string = 'Felipe Reyes';
   color: string = 'red';
 
-  miFormulario: FormGroup = this.fb.group({
+  miFormulario: UntypedFormGroup = this.fb.group({
     nombre: ['', Validators.required]
   });
 
-  constructor( private fb: FormBuilder ) { }
+  constructor( private fb: UntypedFormBuilder ) { }
 
   tieneError( campo: string ): boolean{
     return this.miFormulario.get(campo)?.invalid || false;
