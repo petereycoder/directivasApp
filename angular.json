@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "directivasApp:build:production"
+              "buildTarget": "directivasApp:build:production"
             },
             "development": {
-              "browserTarget": "directivasApp:build:development"
+              "buildTarget": "directivasApp:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -82,7 +82,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "directivasApp:build"
+            "buildTarget": "directivasApp:build"
           }
         },
         "test": {
